@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coin Change Visualizer | Premium Algorithm Suite</title>
+  <link rel="stylesheet" href="style.css?v=2" />
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">✨</div>
+    <div class="logo-text">COIN<span>FLOW</span></div>
+  </div>
+  <div class="header-badges">
+    <span class="badge badge-dijkstra">GREEDY OPTIMIZER</span>
+    <span class="badge badge-astar">DYNAMIC CORE</span>
+  </div>
+</header>
+
+<div class="main-layout">
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <div class="section-title">Visualizer Settings</div>
+
+      <div class="field-group">
+        <label for="amountInput">Target Amount</label>
+        <input type="number" id="amountInput" placeholder="e.g. 43" value="43">
+      </div>
+
+      <div class="field-group">
+        <label for="coinsInput">Denominations</label>
+        <input type="text" id="coinsInput" placeholder="1, 2, 5, 10..." value="1, 2, 5, 10, 20, 50">
+      </div>
+
+      <button id="findBtn" class="btn btn-primary">
+        <span>🚀</span> Run Visualization
+      </button>
+      <button id="resetBtn" class="btn btn-secondary">
+        <span>↺</span> Reset View
+      </button>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="section-title">Status</div>
+      <div style="font-size: 0.85rem; color: var(--text-dim);">
+        <p style="margin-bottom: 8px;">• System Ready</p>
+        <p>• API Connection: <span style="color: var(--success);">Online</span></p>
+      </div>
+    </div>
+  </aside>
+
+  <main class="right-panel">
+    <div class="canvas-wrapper" id="visualizerArea">
+      <div style="text-align: center; max-width: 400px;">
+        <h2 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 12px; opacity: 0.9;">Awaiting Input</h2>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Configure your parameters in the sidebar to visualize the coin distribution algorithms.</p>
+      </div>
+    </div>
+
+    <div class="output-panel hidden" id="outputBox" style="background: transparent; backdrop-filter: none; border: none; padding: 0;">
+      <!-- Main visualization will handle all details -->
+    </div>
+  </main>
+</div>
+
+<section class="explanation">
+  <div class="explanation-inner">
+    <h2 class="explanation-title">How it <span>Works</span></h2>
+    <p class="explanation-subtitle">Deep dive into the mathematical models powering the visualization.</p>
+
+    <div class="explanation-grid">
+      <div class="exp-card">
+        <h3 style="font-family: var(--font-display); margin-bottom: 1rem; color: var(--primary);">Optimal Substructure</h3>
+        <p style="color: var(--text-dim); font-size: 0.95rem;">Dynamic Programming breaks the problem into smaller overlapping subproblems. It builds a table of minimum coins needed for every value up to your target, ensuring the global minimum is always found.</p>
+      </div>
+      <div class="exp-card">
+        <h3 style="font-family: var(--font-display); margin-bottom: 1rem; color: var(--secondary);">Greedy Heuristics</h3>
+        <p style="color: var(--text-dim); font-size: 0.95rem;">The Greedy approach follows the local optimum at each step — picking the largest possible coin. While faster to compute, it may fail to find the optimal solution for non-canonical coin systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<script src="script.js?v=2"></script>
+</body>
+</html>
