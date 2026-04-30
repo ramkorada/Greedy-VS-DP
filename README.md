@@ -48,3 +48,5 @@ DP → 2 coins [3,3]
 ## Conclusion
 The project highlights that Greedy algorithms are fast but may not always produce optimal results, while Dynamic Programming guarantees the optimal solution.
 
+## Contributors
+Abhiram korada
